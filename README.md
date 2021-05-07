@@ -32,3 +32,7 @@ This code has not been tested on computers operating with Linux or MACOS operati
 - Arduino IDE (download can be found at their website)
 - Any Python IDE
 - the PySerial package (pip install pyserial)
+
+----------------
+# Known Issues
+if your own changes in python result in crash while the communication between the arduino and python is activated, there is a possiblity that it remains unclosed even after re-running it. At that moment, the serial connection will crash. To solve this issue, unplug and replug the Arduino to the PC.
