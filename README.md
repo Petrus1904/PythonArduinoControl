@@ -26,5 +26,6 @@ This code has not been tested on computers operating with Linux or MACOS operati
 
 -----------------
 # Requirements
-Arduino IDE (download can be found at their website)
-Any Python IDE and the PySerial package
+- Arduino IDE (download can be found at their website)
+- Any Python IDE
+- the PySerial package (pip install pyserial)
