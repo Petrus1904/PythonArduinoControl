@@ -13,11 +13,14 @@ The goal of this little piece of code is to achieve the fastest possible communi
 - Baudrate of 115200 (duh)
 - Serial communication is in bytes, not chars. So example scripts show that you can send the value 112 in 3 bytes: ('1', '1', '2') each as a ASCII character. This code however sends it as one byte (112 or 'p'). As such, there is much less overhead in the data communication.
 - Communication works in a fire-and-forget logic, so does not needs acknowledgements (this can be changed)
+- PWM frequency in the Arduino board has been changed to 960Hz (default) to 62500Hz. This is to reduce the effect of the switching behaviour in the system.
 
 So in total, there are 3 things you can do:
 1. Request the voltage value of pin A0 (value between 0 and 1024). The PC will send 1 byte and the arduino returns 2.
 2. Set a new PWM duty cycle on pin D6 (value between 0 and 255). The PC will send 2 bytes and immediately continues.
 3. Same as 2 but with an acknowledgement. The PC will send 2 bytes and waits untill the arduino returns 1. This ensures the PWM value is updated before the python script continues (and thus removes the input delay).
+
+From own implementations, if you dont use the acknowledgement in the input script, you can run it at roughly 250Hz (0.004s). With the acknowledgement the sampling rate decreases significantly, to roughly 125Hz (0.008s), so be aware.
 
 -----------------
 # Liability
