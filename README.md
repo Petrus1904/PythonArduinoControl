@@ -20,7 +20,7 @@ So in total, there are 3 things you can do:
 2. Set a new PWM duty cycle on pin D6 (value between 0 and 255). The PC will send 2 bytes and immediately continues.
 3. Same as 2 but with an acknowledgement. The PC will send 2 bytes and waits untill the arduino returns 1. This ensures the PWM value is updated before the python script continues (and thus removes the input delay).
 
-From own implementations, if you dont use the acknowledgement in the input script, you can run it at roughly 250Hz (0.004s). With the acknowledgement the sampling rate decreases significantly, to roughly 125Hz (0.008s), so be aware.
+From my own tests, if you dont use the acknowledgement in the input script, you can run it at roughly 250Hz (0.004s). With the acknowledgement the sampling rate decreases significantly, to roughly 125Hz (0.008s), so be aware.
 
 -----------------
 # Liability
