@@ -1,6 +1,8 @@
 # PythonArduinoControl
 A fast communication method between python and Arduino boards. Useful when testing controllers on a real system but you dont have professional gear  
 
+-----------------
+# Introduction
 I have created this project as we all know testing something on a proper setup is complicated in times of Corona. However, suppose you have this simple Arduino board and some electrical components, it is likely you could build a simple system such as a Buck Converter at home! Therefore, you can actually test your controller on a real system.
 
 Why not MATLAB?
@@ -18,11 +20,11 @@ So in total, there are 3 things you can do:
 3. Same as 2 but with an acknowledgement. The PC will send 2 bytes and waits untill the arduino returns 1. This ensures the PWM value is updated before the python script continues (and thus removes the input delay).
 
 -----------------
-Liability
+# Liability
 I am not responsible for anything you do with this software and any damage caused by it.
 This code has not been tested on computers operating with Linux or MACOS operating systems. I can only confirm that it works on my Win10 device.
 
 -----------------
-Requirements
+# Requirements
 Arduino IDE (download can be found at their website)
 Any Python IDE and the PySerial package
